@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<items>
+  <item>
+    <id>1</id>
+    <name>coffee</name>
+    <price>149.99</price>
+    <amount>3000.00</amount>
+  </item>
+  <item>
+    <id>2</id>
+    <name>tee</name>
+    <price>320.00</price>
+    <amount>25.00</amount>
+  </item>
+</items>
