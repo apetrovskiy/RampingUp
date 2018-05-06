@@ -21,5 +21,10 @@ Public Class NinjectDependencyResolver
 
     Private Sub AddBindings()
         kernel.Bind(Of IValueCalculator).To(Of LinqValueCalculator)()
+        ' kernel.Bind(Of IDiscountHelper).To(Of DefaultDiscountHelper)()
+        ' property injection
+        ' kernel.Bind(Of IDiscountHelper).To(Of DefaultDiscountHelper)().WithPropertyValue("DiscountSize", 50D)
+        ' constructor injection
+        kernel.Bind(Of IDiscountHelper).To(Of DefaultDiscountHelper)().WithConstructorArgument("discountParam", 50D)
     End Sub
 End Class

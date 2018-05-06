@@ -138,6 +138,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\NinjectDependencyResolver.vb" />
+    <Compile Include="Models\DefaultDiscountHelper.vb" />
+    <Compile Include="Models\IDiscountHelper.vb" />
     <Compile Include="Models\IValueCalculator.vb" />
     <Compile Include="Models\LinqValueCalculator.vb" />
     <Compile Include="Models\Product.vb" />
