@@ -1,5 +1,6 @@
 ﻿Imports System.Web.Mvc
 Imports Ninject
+Imports Ninject.Web.Common
 
 Public Class NinjectDependencyResolver
     Implements IDependencyResolver
@@ -20,11 +21,14 @@ Public Class NinjectDependencyResolver
     End Function
 
     Private Sub AddBindings()
-        kernel.Bind(Of IValueCalculator).To(Of LinqValueCalculator)()
+        ' kernel.Bind(Of IValueCalculator).To(Of LinqValueCalculator)()
+        kernel.Bind(Of IValueCalculator).To(Of LinqValueCalculator)().InRequestScope()
+
         ' kernel.Bind(Of IDiscountHelper).To(Of DefaultDiscountHelper)()
         ' property injection
         ' kernel.Bind(Of IDiscountHelper).To(Of DefaultDiscountHelper)().WithPropertyValue("DiscountSize", 50D)
         ' constructor injection
         kernel.Bind(Of IDiscountHelper).To(Of DefaultDiscountHelper)().WithConstructorArgument("discountParam", 50D)
+        kernel.Bind(Of IDiscountHelper).To(Of FlexibleDiscountHelper).WhenInjectedInto(Of LinqValueCalculator)()
     End Sub
 End Class

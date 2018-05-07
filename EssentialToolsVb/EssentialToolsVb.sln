@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EssentialToolsVb", "EssentialToolsVb\EssentialToolsVb.vbproj", "{7D976BA1-7785-4052-AEAC-7386ED131058}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EssentialToolsVb.Tests", "EssentialToolsVb.Tests\EssentialToolsVb.Tests.vbproj", "{B879B4FF-646E-4CC3-A72B-619DBAF98097}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7D976BA1-7785-4052-AEAC-7386ED131058}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D976BA1-7785-4052-AEAC-7386ED131058}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D976BA1-7785-4052-AEAC-7386ED131058}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B879B4FF-646E-4CC3-A72B-619DBAF98097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B879B4FF-646E-4CC3-A72B-619DBAF98097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B879B4FF-646E-4CC3-A72B-619DBAF98097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B879B4FF-646E-4CC3-A72B-619DBAF98097}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -14,7 +14,8 @@ Namespace Controllers
             New Product With {.Name = "Corner flag", .Category = "Soccer", .Price = 34.95D}
         }
 
-        Public Sub New(calcParam As IValueCalculator)
+        ' Public Sub New(calcParam As IValueCalculator)
+        Public Sub New(calcParam As IValueCalculator, calc2 As IValueCalculator)
             calc = calcParam
         End Sub
 

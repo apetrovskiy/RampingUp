@@ -139,9 +139,11 @@
     </Compile>
     <Compile Include="Infrastructure\NinjectDependencyResolver.vb" />
     <Compile Include="Models\DefaultDiscountHelper.vb" />
+    <Compile Include="Models\FlexibleDiscountHelper.vb" />
     <Compile Include="Models\IDiscountHelper.vb" />
     <Compile Include="Models\IValueCalculator.vb" />
     <Compile Include="Models\LinqValueCalculator.vb" />
+    <Compile Include="Models\MinimumDiscountHelper.vb" />
     <Compile Include="Models\Product.vb" />
     <Compile Include="Models\ShoppingCart.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
