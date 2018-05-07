@@ -28,9 +28,10 @@
             return kernel.GetAll(serviceType);
         }
 
-        private void AddBindings()
+        public void AddBindings()
         {
-            var mock = new Mock<IProductRepository>
+            var mock = new Mock<IProductRepository>();
+
         }
     }
 }
