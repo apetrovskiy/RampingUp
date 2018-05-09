@@ -1,4 +1,5 @@
-﻿Namespace SportsStoreVb.Domain.Entities
+﻿' Namespace SportsStoreVb.Domain.Entities
+Namespace Entities
     Public Class Product
         Public Property ProductID() As Integer
         Public Property Name() As String

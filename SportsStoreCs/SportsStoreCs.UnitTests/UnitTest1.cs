@@ -1,14 +1,16 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace SportsStoreCs.UnitTests
+﻿namespace SportsStoreCs.UnitTests
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Web.Mvc;
     using Domain.Abstract;
     using Domain.Entities;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
     using WebUI.Controllers;
+    using WebUI.HtmlHelpers;
+    using WebUI.Models;
 
     [TestClass]
     public class UnitTest1
@@ -34,6 +36,26 @@ namespace SportsStoreCs.UnitTests
             Assert.IsTrue(prodArray.Length == 2);
             Assert.AreEqual(prodArray[0].Name, "P4");
             Assert.AreEqual(prodArray[1].Name, "P5");
+        }
+
+        [TestMethod]
+        public void Can_Generate_Page_Links()
+        {
+            HtmlHelper myHelper = null;
+            var pagingInfo = new PagingInfo
+            {
+                CurrentPage = 2,
+                TotalItems = 28,
+                ItemsPerPage = 10
+            };
+            Func<int, string> pageUrlDelegate = i => "Page" + i;
+
+            var result = myHelper.PageLinks(pagingInfo, pageUrlDelegate);
+
+            Assert.AreEqual(@"<a class=""btn btn-default"" href=""Page1"">1</a>" +
+                            @"<a class=""btn btn-default btn-primary selected"" href=""Page2"">2</a>" +
+                            @"<a class=""btn btn-default"" href=""Page3"">3</a>",
+                result.ToString());
         }
     }
 }

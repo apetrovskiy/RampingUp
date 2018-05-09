@@ -1,6 +1,8 @@
-﻿Imports SportsStoreVb.Domain.SportsStoreVb.Domain.Entities
+﻿Imports SportsStoreVb.Domain.Entities
+Imports SportsStoreVb.Domain.SportsStoreVb.Domain.Entities
 
-Namespace SportsStoreVb.Domain.Concrete
+' Namespace SportsStoreVb.Domain.Concrete
+Namespace Concrete
     Public Class EFProductRepository
         Implements IProductRepository
 

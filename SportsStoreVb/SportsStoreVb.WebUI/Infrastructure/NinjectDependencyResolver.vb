@@ -1,6 +1,7 @@
 ﻿Imports System.Web.Mvc
 Imports Ninject
 Imports SportsStoreVb.Domain
+Imports SportsStoreVb.Domain.Concrete
 Imports SportsStoreVb.Domain.SportsStoreVb.Domain.Concrete
 
 Public Class NinjectDependencyResolver

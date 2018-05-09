@@ -1,9 +1,12 @@
 ﻿Imports System.Text
+Imports System.Web.Mvc
 Imports Microsoft.VisualStudio.TestTools.UnitTesting
 Imports Moq
 Imports SportsStoreVb.Domain
-Imports SportsStoreVb.Domain.SportsStoreVb.Domain.Entities
+Imports SportsStoreVb.Domain.Entities
+Imports SportsStoreVb.WebUI
 Imports SportsStoreVb.WebUI.Controllers
+Imports SportsStoreVb.WebUI.HtmlHelpers
 
 <TestClass()> Public Class UnitTest1
 
@@ -27,4 +30,19 @@ Imports SportsStoreVb.WebUI.Controllers
         Assert.AreEqual(prodArray(1).Name, "P5")
     End Sub
 
+    <TestMethod()> Public Sub Can_Generate_Page_Links()
+        Dim myHelper As HtmlHelper = Nothing
+        Dim pagingInfo As New PagingInfo() With {
+                .CurrentPage = 2,
+                .TotalItems = 28,
+                .ItemsPerPage = 10
+                            }
+        Dim pageUrlDelegate As Func(Of Integer, String) = Function(i) "Page" & i
+
+        Dim result = myHelper.PageLinks(pagingInfo, pageUrlDelegate)
+
+        Assert.AreEqual("<a class=""btn btn-default"" href=""Page1"">1</a>" & _
+            "<a class=""btn btn-default btn-primary selected"" href=""Page2"">2</a>" & _
+            "<a class=""btn btn-default"" href=""Page3"">3</a>", result.ToString())
+    End Sub
 End Class

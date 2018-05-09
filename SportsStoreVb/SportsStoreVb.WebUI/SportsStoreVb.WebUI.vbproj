@@ -156,7 +156,10 @@
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HtmlHelpers\Class1.vb" />
+    <Compile Include="HtmlHelpers\PagingHelpers.vb" />
     <Compile Include="Infrastructure\NinjectDependencyResolver.vb" />
+    <Compile Include="Models\PagingInfo.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -213,7 +216,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SportsStoreVb.Domain\SportsStoreVb.Domain.vbproj">
