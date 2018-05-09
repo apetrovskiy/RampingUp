@@ -1,7 +1,10 @@
 ﻿namespace SportsStoreCs.Domain.Concrete
 {
-    public class EFDbContext
+    using System.Data.Entity;
+    using Entities;
+
+    public class EFDbContext : DbContext
     {
-        
+        public DbSet<Product> Products { get; set; }
     }
 }

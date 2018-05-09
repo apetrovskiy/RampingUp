@@ -1,8 +1,7 @@
 ﻿Imports System.Web.Mvc
-Imports Moq
 Imports Ninject
 Imports SportsStoreVb.Domain
-Imports SportsStoreVb.Domain.SportsStoreVb.Domain.Entities
+Imports SportsStoreVb.Domain.SportsStoreVb.Domain.Concrete
 
 Public Class NinjectDependencyResolver
     Implements IDependencyResolver
@@ -22,12 +21,13 @@ Public Class NinjectDependencyResolver
     End Function
 
     Private Sub AddBindings()
-        Dim mock As New Mock(Of IProductRepository)
-        mock.Setup(Function(m) m.Products).Returns(New List(Of Product) From {
-                                                      New Product() With{.Name = "Football", .Price = 25},
-                                                      New Product() With {.Name="Surf board", .Price = 179 },
-                                                      New Product() With{.Name = "Running shoes", .Price = 95 }
-                                                   })
-        kernel.Bind(Of IProductRepository).ToConstant(mock.Object)
+        ' Dim mock As New Mock(Of IProductRepository)
+        ' mock.Setup(Function(m) m.Products).Returns(New List(Of Product) From {
+        '                                               New Product() With{.Name = "Football", .Price = 25},
+        '                                               New Product() With {.Name="Surf board", .Price = 179 },
+        '                                               New Product() With{.Name = "Running shoes", .Price = 95 }
+        '                                            })
+        ' kernel.Bind(Of IProductRepository).ToConstant(mock.Object)
+        kernel.Bind(Of IProductRepository).To(Of EFProductRepository)
     End Sub
 End Class

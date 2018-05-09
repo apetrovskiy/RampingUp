@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Web.Mvc;
     using System.Web.WebSockets;
+    using Domain.Concrete;
     using Domain.Entities;
     using Moq;
     using Ninject;
@@ -31,6 +32,7 @@
 
         public void AddBindings()
         {
+            /*
             var mock = new Mock<IProductRepository>();
             mock.Setup(m => m.Products).Returns(new List<Product>
             {
@@ -39,6 +41,8 @@
                 new Product {Name = "Running shoes", Price = 95}
             });
             kernel.Bind<IProductRepository>().ToConstant(mock.Object);
+            */
+            kernel.Bind<IProductRepository>().To<EFProductRepository>();
         }
     }
 }
