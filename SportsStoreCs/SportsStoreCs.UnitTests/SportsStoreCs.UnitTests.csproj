@@ -93,6 +93,16 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SportsStoreCs.Domain\SportsStoreCs.Domain.csproj">
+      <Project>{785965C0-8C29-408F-B64F-C552BDBD6D15}</Project>
+      <Name>SportsStoreCs.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SportsStoreCs.WebUI\SportsStoreCs.WebUI.csproj">
+      <Project>{5A879890-9A62-4C4C-B1E0-EEDE853F1F54}</Project>
+      <Name>SportsStoreCs.WebUI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

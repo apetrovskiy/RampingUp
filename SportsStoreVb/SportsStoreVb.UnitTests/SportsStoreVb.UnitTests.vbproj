@@ -154,6 +154,16 @@
   <ItemGroup>
     <Content Include="App_Start\NinjectWebCommon.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SportsStoreVb.Domain\SportsStoreVb.Domain.vbproj">
+      <Project>{D9897EEF-EDB8-489B-8D21-9A6B808A141C}</Project>
+      <Name>SportsStoreVb.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SportsStoreVb.WebUI\SportsStoreVb.WebUI.vbproj">
+      <Project>{68431CE1-6609-485B-AB80-CDFC91B5998F}</Project>
+      <Name>SportsStoreVb.WebUI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
