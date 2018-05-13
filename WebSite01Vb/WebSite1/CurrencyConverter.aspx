@@ -12,7 +12,8 @@
         <div>
             Convert: &nbsp;
             <input type="text" id="US" runat="server"/>
-            &nbsp; U.S. dollars to Euros.
+            &nbsp; U.S. dollars to &nbsp;
+            <select id="Currency" runat="server"></select>
             <br/><br/>
             <input type="submit" value="OK" id="Convert" runat="server"/>
             <br/><br/>
