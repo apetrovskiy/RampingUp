@@ -15,6 +15,8 @@
             &nbsp; U.S. dollars to Euros.
             <br/><br/>
             <input type="submit" value="OK" id="Convert" runat="server"/>
+            <br/><br/>
+            <p style="font-weight:bold" id="Result" runat="server"></p>
         </div>
     </form>
 </body>
