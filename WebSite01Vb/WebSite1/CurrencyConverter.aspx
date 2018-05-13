@@ -16,6 +16,9 @@
             <select id="Currency" runat="server"></select>
             <br/><br/>
             <input type="submit" value="OK" id="Convert" runat="server"/>
+            <input type="submit" value="Show Graph" id="ShowGraph" runat="server" />
+            <br/><br/>
+            <img id="Graph" src="" alt="Currency Graph" runat="server"/>
             <br/><br/>
             <p style="font-weight:bold" id="Result" runat="server"></p>
         </div>
