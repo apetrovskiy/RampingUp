@@ -10,12 +10,19 @@ Partial Class CurrencyConverter
 
         Dim oldAmount As Double = Val(US.Value)
 
-        ' Retrieve the selected ListItem object by its index number.
-        Dim item As ListItem = Currency.Items(Currency.SelectedIndex)
+        If oldAmount <= 0 Then
+            Result.Style("color") = "Red"
+            Result.InnerText = "Specify a positive number"
+        Else
+            Result.Style("color") = "Black"
 
-        Dim newAmount As Double = oldAmount * Val(item.Value)
-        Result.InnerText = oldAmount.ToString() & " U.S. dollars = "
-        Result.InnerText &= newAmount.ToString() & " " & item.Text
+            ' Retrieve the selected ListItem object by its index number.
+            Dim item As ListItem = Currency.Items(Currency.SelectedIndex)
+
+            Dim newAmount As Double = oldAmount * Val(item.Value)
+            Result.InnerText = oldAmount.ToString() & " U.S. dollars = "
+            Result.InnerText &= newAmount.ToString() & " " & item.Text
+        End If
     End Sub
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
