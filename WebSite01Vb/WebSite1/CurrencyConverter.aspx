@@ -8,13 +8,13 @@
     <title>Currency Converter</title>
 </head>
 <body>
-    <form method="post">
+    <form runat="server">
         <div>
             Convert: &nbsp;
-            <input type="text"/>
+            <input type="text" id="US" runat="server"/>
             &nbsp; U.S. dollars to Euros.
             <br/><br/>
-            <input type="submit" value="OK"/>
+            <input type="submit" value="OK" id="Convert" runat="server"/>
         </div>
     </form>
 </body>
