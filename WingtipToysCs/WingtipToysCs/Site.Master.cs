@@ -10,6 +10,9 @@ using Microsoft.AspNet.Identity;
 
 namespace WingtipToysCs
 {
+    using System.Linq;
+    using Models;
+
     public partial class SiteMaster : MasterPage
     {
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
@@ -70,6 +73,13 @@ namespace WingtipToysCs
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public IQueryable<Category> GetCategories()
+        {
+            var _db = new ProductContext();
+            var query = _db.Categories;
+            return query;
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
